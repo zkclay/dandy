@@ -12,7 +12,9 @@ use std::io::Result;
 
 pub fn find_vanity_address(prefix: String, case_sensitive: bool, file_path: &str) {
     let mut counter = 0;
-    let interval = 100;
+    let interval = 10000;
+
+    println!("Beginning search for prefix: {} caseSensitive: {}", prefix, case_sensitive);
 
     loop {
         let result = generate_addr();
@@ -27,7 +29,7 @@ pub fn find_vanity_address(prefix: String, case_sensitive: bool, file_path: &str
             append_tuple_to_file(result, file_path).expect("error writing to file");
         }
         
-        if counter % interval == 0 {
+        if counter % interval == 0 && counter > 0 {
             println!("{} addresses searched.", counter);
         }
 
