@@ -1,5 +1,7 @@
 ## Dandy
-### A Vanity Address Generator for the Dusk Netwwork
+### A Vanity Address Generator for the Dusk Network
+
+<img src="https://github.com/zkclay/dandy/assets/161740412/cbe1f1e6-011d-4394-962c-264c5019dbe3" width="400">
 
 #### Getting Started
 
@@ -16,6 +18,9 @@ The executable takes 3 commands like arguments that are listed below.
 
 ```
 dandy <prefix> <caseSensitive?> <resultFilePath>
+
+### example usage
+./dandy 00 false results.txt
 ```
 
 prefix refers to the prefix that you desire for you vanity address. Longer prefix will require more searching and time.
